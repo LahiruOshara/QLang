@@ -29,13 +29,13 @@ def createCSV(name):
 
 
 if __name__ == '__main__':
-    with open('qald-7-train.json', 'r') as f:
+    with open('qald-8-train.json', 'r') as f:
         parseJsonData(f)
-    createCSV("qald-7-train")
+    createCSV("qald-8-train")
 
-    with open('qald-7-test.json','r') as f:
+    with open('qald-8-test.json','r') as f:
         parseJsonData(f)
-    createCSV('qald-7-test')
+    createCSV('qald-8-test')
 
 
 

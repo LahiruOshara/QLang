@@ -7,12 +7,12 @@ def extract(dataset):
 
 
 
-with open('qald-7-train.json', 'w') as f:
-    data = extract("qald-7-train-multilingual")
+with open('qald-8-train.json', 'w') as f:
+    data = extract("qald-8-train-multilingual")
     f.write(data)
 
 
-with open('qald-7-test.json', 'w') as f:
-    data = extract("qald-7-test-multilingual")
+with open('qald-8-test.json', 'w') as f:
+    data = extract("qald-8-test-multilingual")
     f.write(data)
 

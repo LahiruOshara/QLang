@@ -17,7 +17,7 @@ def extractLan(f):
         count += 1
 
 
-with open('opennlp_output.txt', 'r') as f:
+with open('key_word_output.txt', 'r') as f:
     extractLan(f)
 
 # English, Spanish, German, Italian, French, Dutch, Romanian
@@ -33,9 +33,9 @@ for i in range(len(result)):
     else:
         result[i] = 7
 
-print(result.count(7))
+# print(result.count(7))
 
-df = pd.read_csv("qsentence.csv")
+df = pd.read_csv("keyword.csv")
 columns = ['pt_BR', 'hi_IN', 'fa']
 
 for col in columns:
@@ -54,7 +54,7 @@ y_true = list(df['lang'])
 tot = len(result)
 correct = 0
 for i in range(tot):
-    if (result[i] == y_true[i]):
+    if result[i] == y_true[i]:
         correct += 1
 
 score = correct / tot
