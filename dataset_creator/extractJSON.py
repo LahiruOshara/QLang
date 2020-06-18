@@ -2,18 +2,18 @@ import subprocess
 
 
 def extract(dataset):
-    execute = ["java", "-jar", "irbench-v0.0.1-beta.2.jar", "-questions", dataset]
+    execute = ["java", "-jar", "../data/irbench-v0.0.1-beta.2.jar", "-questions", dataset]
     return subprocess.run(execute, capture_output=True).stdout.decode()
 
 
 
-with open('qald-2-train.json', 'w') as f:
-    data = extract("qald-2-train")
+with open('qald-9-train.json', 'w') as f:
+    data = extract("qald-9-train")
     f.write(data)
 
 
-with open('qald-2-test.json', 'w') as f:
-    data = extract("qald-2-test")
+with open('qald-9-test.json', 'w') as f:
+    data = extract("qald-9-test")
     f.write(data)
 
 '''
