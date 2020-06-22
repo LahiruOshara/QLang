@@ -17,7 +17,7 @@ def extractLan(f):
         count += 1
 
 
-with open('opennlp_output.txt', 'r') as f:
+with open('../opennlp_output.txt', 'r') as f:
     extractLan(f)
 
 # English, Spanish, German, Italian, French, Dutch, Romanian

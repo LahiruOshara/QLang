@@ -3,7 +3,7 @@ import subprocess
 from sklearn.metrics import accuracy_score
 import time
 
-data = pd.read_csv('keyword.csv')
+data = pd.read_csv('../keyword.csv')
 
 X = data['questions']
 y = data['lang']
@@ -16,10 +16,10 @@ def detect(file):
 count=0
 out = []
 for text in X:
-    with open('../X.txt', 'w') as f:
+    with open('../../X.txt', 'w') as f:
         f.write(text)
     if f.closed:
-        out.append(detect('../X.txt'))
+        out.append(detect('../../X.txt'))
     count += 1
     print(count)
     # if count==5:
